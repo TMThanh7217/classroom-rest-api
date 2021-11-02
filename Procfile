@@ -1,1 +1,1 @@
-web: node ./classroom-api/app.js
+web: node ./app.js
