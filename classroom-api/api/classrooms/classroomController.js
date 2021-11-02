@@ -8,7 +8,8 @@ exports.list = function(req, res) {
     const classrooms = classroomService.list();
 
     if (classrooms) {
-        res.status(200).json(classrooms);
+        //res.status(200).json(classrooms);
+        res.status(200).send(classrooms);
       }
       else {
         res.status(404).json({msg: 'Cannot find classroom with the given id'});

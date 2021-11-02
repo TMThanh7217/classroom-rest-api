@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const classroomsRouter = require('./api/classrooms');
 
 const app = express();
+let port = process.env.PORT || 9000;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,4 +41,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.listen(port, () => {
+  console.log(`App is listening on port http://localhost:${port}`)
+});
 module.exports = app;

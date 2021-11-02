@@ -2,7 +2,8 @@
     nghiệp vụ tương tác với resource, gọi model nếu cần tương tác cơ sở dữ liệu
 */
 
-const classrooms = require('../mock');
+//const classrooms = require('../mock');
+const classrooms = require('./data.json');
 
 exports.list = () => classrooms;
 exports.detail = (id) => classrooms.find(classroom => classroom.id === id);
