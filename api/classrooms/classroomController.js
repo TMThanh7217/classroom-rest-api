@@ -30,7 +30,7 @@ exports.detail = function(req, res) {
 
 exports.create = function(req, res) {
     const classroom = {
-        name: req.body.name,
+        name: req.body.classroomName,
     };
     const classroomId = classroomService.create(classroom);
     if (classroomId) {
